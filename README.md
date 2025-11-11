@@ -30,3 +30,5 @@ Open http://localhost:3000
 - This starter uses MDX for docs pages in `/app/docs/*.mdx`.
 - Logo is in `/public/logo.svg`.
 - Theme toggle is implemented in client-side component at `/components/ThemeToggle.tsx`.
+
+.
