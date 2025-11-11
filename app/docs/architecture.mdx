@@ -1,0 +1,34 @@
+---
+title: Architecture
+---
+
+# Technical Architecture
+
+## Technology Stack
+
+**Frontend**
+- React Native 0.79.5 + Expo Router
+- TypeScript
+- Redux Toolkit
+- Reanimated, Moti (animations)
+
+**Backend & Integration**
+- Axios for API
+- WebSocket for real-time updates
+- Clerk for authentication (JWT tokens)
+- Razorpay for payments
+
+## System Overview
+
+Client -> API Gateway (auth) -> Backend APIs -> Razorpay / 3rd party services
+
+Real-time updates use WebSocket to push transaction status and balance updates to the client.
+
+## Data flow (Transaction)
+1. User initiates transaction
+2. Validate session (Clerk)
+3. Check wallet balance
+4. Create transaction request (Backend)
+5. Process payment via Razorpay
+6. Update status via WebSocket
+7. Refresh UI

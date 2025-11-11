@@ -1,0 +1,26 @@
+---
+title: API Reference
+---
+
+# API Reference (Overview)
+
+This section is a starting point for API docs. Add endpoints and examples here.
+
+## Authentication
+- `POST /api/auth/login` — exchange credentials for JWT
+- `POST /api/auth/refresh` — refresh token endpoint
+
+## Wallet & Transactions
+- `GET /api/wallet` — fetch wallet balance and transactions
+- `POST /api/transfer` — initiate a transfer (body: { to, amount, note })
+- `GET /api/transactions` — list transactions with filters
+
+## Invoices
+- `POST /api/invoices` — create invoice (returns PDF link)
+- `GET /api/invoices/:id` — invoice detail
+
+## Subscriptions & Referrals
+- `POST /api/subscribe` — start a subscription
+- `POST /api/referrals/redeem` — apply referral code
+
+_Add full request/response examples, error codes, and webhooks as needed._
